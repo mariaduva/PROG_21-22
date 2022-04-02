@@ -73,14 +73,13 @@ public class VComprobarCapicua extends JFrame {
 		try {
 			int num = Integer.parseInt(txtCapicua.getText());
 			
-			//if(num > 999 && num < 100)throw new NumberFormatException();
-			// TODO solucinar error excepción
 			try {
-				if(num > 999 && num < 100)throw new NumberFormatException();
+				if(num < 999 && num > 100)capi = new Capicua(num);
+				else throw new NumberFormatException();
+				
 			} catch (NumberFormatException e) {
 				mostrarError("El número debe ser positivo y tener tres dígitos");
 			}
-			capi = new Capicua(num);
 			
 		} catch (NumberFormatException e) {
 			mostrarError("El número debe ser un valor entero");
@@ -95,6 +94,7 @@ public class VComprobarCapicua extends JFrame {
 
 	public void mostrarResultado(String resultado) {
 		lblResultado.setText(resultado);
+		lblResultado.setForeground(Color.BLUE);
 	}
 	
 }

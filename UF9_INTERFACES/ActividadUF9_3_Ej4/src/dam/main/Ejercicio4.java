@@ -5,7 +5,7 @@ import java.awt.EventQueue;
 import dam.control.ComprobarCapicuaControlador;
 import dam.view.VComprobarCapicua;
 
-public class Ejercicio3 {
+public class Ejercicio4 {
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
